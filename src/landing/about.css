@@ -1,0 +1,31 @@
+.page-container {
+    padding: 50px;
+}
+
+.page-container h1 {
+    text-align: center;
+    font-weight: 500;
+}
+
+span {
+    color: #8d8cf0;
+}
+
+.card {
+    background-color: #dad9f0;
+    color: rgb(110, 110, 110);
+    padding: 10px;
+    margin: 10px;
+}
+
+.why {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.why img {
+    width: 300px;
+    height: 300px;
+}
