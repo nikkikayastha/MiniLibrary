@@ -7,6 +7,11 @@ import LandingScreen from "./landing/landingScreen";
 import About from "./landing/about";
 import Contact from "./landing/contact";
 import Features from "./landing/features";
+import Dashboard from "./dashboard/dashboard";
+import Books from "./dashboard/books";
+import Members from "./dashboard/members";
+import AddBooks from "./dashboard/addbooks";
+import AddMember from "./dashboard/addmember";
 
 export default function App() {
   return (
@@ -17,6 +22,11 @@ export default function App() {
       <Route path="/features" element={<Features />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/books" element={<Books />} />
+      <Route path="/members" element={<Members />} />
+      <Route path="/add-books" element={<AddBooks />} />
+      <Route path="/add-member" element={<AddMember />} />
     </Routes>
   );
 }

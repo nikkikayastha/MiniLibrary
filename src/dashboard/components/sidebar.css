@@ -1,0 +1,32 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  color: #7b7dfc;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 12px 0;
+  cursor: pointer;
+  color: #333;
+}
+
+.menu li:hover {
+  color: #7b7dfc;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}

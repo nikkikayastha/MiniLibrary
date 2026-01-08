@@ -1,38 +1,3 @@
-// import { Link } from 'react-router-dom';
-// import './SignUp.css';
-// export default function Signup() {
-//     return (
-//         <div className="main_container">
-//             <div className='signup'>
-//                 <h1>Create Your Account</h1>
-//                 <h4>Make your library management easy</h4>
-//                 <div className='name'>
-//                     <div>
-//                         <span>First Name</span>
-//                         <input type='name' placeholder='Rajesh' />
-//                     </div>
-//                     <div>
-//                         <span>Last Name</span>
-//                         <input type='name' placeholder='Hamal' />
-//                     </div>
-//                 </div>
-//                 <span>Email</span>
-//                 <input type='email' placeholder='hamalrajesh62@gmail.com' />
-//                 <span>Password</span>
-//                 <input type='password' placeholder='********' />
-//                 <span>Confirm Password</span>
-//                 <input type='password' placeholder='********' />
-//                 <p></p>
-//                 <button style={{ color: 'white' }}>Sign Up</button>
-//                 <p>Already have an account? <Link to={'/login'} style={{ color: 'blue' }}>Sign In.</Link></p>
-//             </div>
-//             <div className='right-container'>
-//                 <img alt="Signup" src={require('../assets/singup_img.png')}></img>
-//             </div>
-//         </div>
-//     )
-// }
-
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { registerUser } from '../api/auth';
@@ -50,7 +15,8 @@ export default function Signup() {
     });
 
     const [errors, setErrors] = useState({});
-    const [loading, setLoading] = useState(false);
+    const [generalError, setGeneralError] = useState("");
+
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -58,7 +24,6 @@ export default function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setLoading(true);
 
         const payload = {
             email: form.email,
@@ -73,10 +38,19 @@ export default function Signup() {
                 navigate("/login");
             })
             .catch((err) => {
-                setErrors(err.response?.data || {});
-            })
-            .finally(() => {
-                setLoading(false);
+                if (err.response?.data) {
+                    const data = err.response.data;
+
+                    // Set field errors
+                    setErrors(data);
+
+                    // Combine non-field errors to show at top
+                    if (data.non_field_errors) {
+                        setGeneralError(data.non_field_errors.join(" "));
+                    }
+                } else {
+                    setGeneralError("Something went wrong. Please try again.");
+                }
             });
     };
 
@@ -134,9 +108,8 @@ export default function Signup() {
                         onChange={handleChange}
                     />
 
-                    <button type="submit" disabled={loading} style={{ color: 'white' }}>
-                        {loading ? "Signing Up..." : "Sign Up"}
-                    </button>
+                    <button type="submit"  style={{ color: 'white' }}>
+                        Sign Up                    </button>
                 </form>
 
                 <p>

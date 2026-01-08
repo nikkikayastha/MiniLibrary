@@ -51,7 +51,7 @@ export default function LandingScreen() {
                 <div className="left-container">
                     <h1>Organize, Track, and Manage Your <span style={{ color: '#8d8cf0' }}>Library</span> Effortlessly</h1>
                     <h4>An efficient and reliable platform for librarians.</h4>
-                    <button onClick={() => navigate("/login")}>Get Started </button>
+                    <button onClick={() => navigate("/login")}>Get Started</button>
                 </div>
                 <img alt="landing" src={require('../assets/landing.png')} />
             </div>

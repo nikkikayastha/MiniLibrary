@@ -1,0 +1,53 @@
+.layout {
+  display: flex;
+}
+
+.content {
+  padding: 30px;
+  width: 100%;
+  background: #f8f9fd;
+}
+
+.header {
+  background: #8f91f8;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 180px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.red {
+  background: #ff8a8a;
+}
+
+.yellow {
+  background: #f1d232;
+}
+
+.table {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 10px 0;
+}
