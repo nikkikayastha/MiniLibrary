@@ -41,7 +41,7 @@ export default function AddBooks() {
     <div className="layout">
       <Sidebar />
 
-      <div className="content">
+      {/* <div className="content">
         <h2>Add New Book</h2>
 
         <input
@@ -87,7 +87,69 @@ export default function AddBooks() {
         />
 
         <button onClick={handleSubmit}>Add Book</button>
+      </div> */}
+      <div className="content">
+        <h2>Add New Book</h2>
+
+        <label>Book Title</label>
+        <input
+          value={title}
+          onChange={e => setTitle(e.target.value)}
+          placeholder="Enter book title"
+        />
+
+        <label>Author</label>
+        <input
+          value={author}
+          onChange={e => setAuthor(e.target.value)}
+          placeholder="Enter author name"
+        />
+
+        <label>ISBN</label>
+        <input
+          value={isbn}
+          onChange={e => setIsbn(e.target.value)}
+          placeholder="Enter ISBN number"
+        />
+
+        <label>Category</label>
+        <input
+          value={category}
+          onChange={e => setCategory(e.target.value)}
+          placeholder="Enter category"
+        />
+
+        <label>Published Year</label>
+        <input
+          value={published_year}
+          onChange={e => setPublishedYear(e.target.value)}
+          placeholder="Enter published year"
+        />
+
+        <label>Description</label>
+        <input
+          value={description}
+          onChange={e => setDescription(e.target.value)}
+          placeholder="Enter description"
+        />
+
+        <label>Total Copies</label>
+        <input
+          value={copies_total}
+          onChange={e => setCopiesTotal(e.target.value)}
+          placeholder="Enter total copies"
+        />
+
+        <label>Available Copies</label>
+        <input
+          value={copies_available}
+          onChange={e => setCopiesAvailable(e.target.value)}
+          placeholder="Enter available copies"
+        />
+
+        <button onClick={handleSubmit}>Add Book</button>
       </div>
+
     </div>
   );
 }

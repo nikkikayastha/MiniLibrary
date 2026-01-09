@@ -35,27 +35,35 @@ export default function AddBooks() {
             <div className="content">
                 <h2>Add New Member</h2>
 
+                <label>Membership ID</label>
                 <input
                     value={membership_id}
                     onChange={e => setMembershipId(e.target.value)}
                     placeholder="Membership ID"
                 />
 
+                <label>Full Name</label>
                 <input
                     value={full_name}
                     onChange={e => setName(e.target.value)}
                     placeholder="Full Name"
                 />
+
+                <label>Email</label>
                 <input
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     placeholder="Email"
                 />
+
+                <label>Phone Number</label>
                 <input
                     value={phone}
                     onChange={e => setPhone(e.target.value)}
                     placeholder="Phone Number"
                 />
+
+                <label>Address</label>
                 <input
                     value={address}
                     onChange={e => setAddress(e.target.value)}

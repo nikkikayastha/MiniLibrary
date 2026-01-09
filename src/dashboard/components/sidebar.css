@@ -30,3 +30,8 @@
   text-decoration: none;
   color: inherit;
 }
+
+.logout-btn {
+  cursor: pointer;
+  font: inherit;
+}

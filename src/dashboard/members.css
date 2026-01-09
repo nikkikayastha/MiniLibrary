@@ -1,6 +1,117 @@
-.member {
+/* .member {
   background: white;
   padding: 15px;
   margin-top: 10px;
   border-radius: 8px;
+} */
+.page-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.member-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+}
+
+.member-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.member-id {
+  background-color: #1976d2;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.member-info p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.issued-books {
+  margin-top: 12px;
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.issued-books h5 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+}
+
+.issued-books ul {
+  list-style-type: disc;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.no-books {
+  margin-top: 8px;
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+}
+
+.status-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.issued-book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.return-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.returned-badge {
+  background-color: #4caf50;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.actions .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ef4444;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.actions .delete-btn:hover {
+  color: #b91c1c;
 }

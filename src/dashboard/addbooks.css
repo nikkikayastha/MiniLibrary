@@ -5,10 +5,64 @@ input {
   width: 300px;
 }
 
-button {
+.content button {
   padding: 10px 20px;
   background: #7b7dfc;
   color: white;
   border: none;
   border-radius: 6px;
+}
+
+.content {
+  max-width: 400px;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.content h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+.content input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.content input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.content button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.content button:hover {
+  background-color: #357ab8;
 }

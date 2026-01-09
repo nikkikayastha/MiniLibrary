@@ -14,7 +14,7 @@ export default function Contact() {
 
                 <div>
                     <h5>Sitemap</h5>
-                    <ul className='menu'>
+                    <ul className='contact-menu'>
                         <li>Home</li>
                         <li>About Us</li>
                         <li>Features</li>
@@ -23,7 +23,7 @@ export default function Contact() {
 
                 <div>
                     <h5>Utility</h5>
-                    <ul className='menu'>
+                    <ul className='contact-menu'>
                         <li>Privacy Policy</li>
                     </ul>
                 </div>
